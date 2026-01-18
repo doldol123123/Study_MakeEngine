@@ -5,6 +5,10 @@ VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_Window", "Editor_Window\Editor_Window.vcxproj", "{B37B4FC2-AC92-45AF-954A-5A57B5C8AB2E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DododoEngine_Window", "DododoEngine_Window\DododoEngine_Window.vcxproj", "{45D0B20B-1E50-45AF-AB1D-02EE626A3BA8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DododoEngine_SOURCE", "DododoEngine_SOURCE\DododoEngine_SOURCE.vcxitems", "{361C0188-ACC5-4AD4-B6E1-88742EB55B78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,11 +25,24 @@ Global
 		{B37B4FC2-AC92-45AF-954A-5A57B5C8AB2E}.Release|x64.Build.0 = Release|x64
 		{B37B4FC2-AC92-45AF-954A-5A57B5C8AB2E}.Release|x86.ActiveCfg = Release|Win32
 		{B37B4FC2-AC92-45AF-954A-5A57B5C8AB2E}.Release|x86.Build.0 = Release|Win32
+		{45D0B20B-1E50-45AF-AB1D-02EE626A3BA8}.Debug|x64.ActiveCfg = Debug|x64
+		{45D0B20B-1E50-45AF-AB1D-02EE626A3BA8}.Debug|x64.Build.0 = Debug|x64
+		{45D0B20B-1E50-45AF-AB1D-02EE626A3BA8}.Debug|x86.ActiveCfg = Debug|Win32
+		{45D0B20B-1E50-45AF-AB1D-02EE626A3BA8}.Debug|x86.Build.0 = Debug|Win32
+		{45D0B20B-1E50-45AF-AB1D-02EE626A3BA8}.Release|x64.ActiveCfg = Release|x64
+		{45D0B20B-1E50-45AF-AB1D-02EE626A3BA8}.Release|x64.Build.0 = Release|x64
+		{45D0B20B-1E50-45AF-AB1D-02EE626A3BA8}.Release|x86.ActiveCfg = Release|Win32
+		{45D0B20B-1E50-45AF-AB1D-02EE626A3BA8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A1FA795-5A15-440D-8972-A8401EEA7BE7}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		DododoEngine_SOURCE\DododoEngine_SOURCE.vcxitems*{361c0188-acc5-4ad4-b6e1-88742eb55b78}*SharedItemsImports = 9
+		DododoEngine_SOURCE\DododoEngine_SOURCE.vcxitems*{45d0b20b-1e50-45af-ab1d-02ee626a3ba8}*SharedItemsImports = 4
+		DododoEngine_SOURCE\DododoEngine_SOURCE.vcxitems*{b37b4fc2-ac92-45af-954a-5a57b5c8ab2e}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal
