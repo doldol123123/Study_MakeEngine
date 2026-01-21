@@ -7,7 +7,7 @@
 
 //#pragma comment(lib,"..\\x64\\Debug\\DododoEngine_Window.lib") 
 
-Application app;
+dododo::Application application;
 
 #define MAX_LOADSTRING 100
 
@@ -70,6 +70,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         {
             //메세지가 없을 경우 여기서 처리
             //게임 로직이 들어가면 된다.
+
+            application.Run();
         }
     }
 
@@ -131,6 +133,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
 
+   application.Initialize(hWnd);
+
    if (!hWnd)
    {
       return FALSE;
@@ -177,6 +181,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
+
+            
+
+            //DC란 화면 출력에 필요한 모든 정보를 가지는 데이터 구조체이며
+            // GDI 모듈에 의해서 관리된다
+            // 어떤 폰트를 사용할건가? 어떤 선의 굵기를 정해줄건가 어떤 색상으로 그려줄건가
+            // 화면 추렭에 필요한 모든 경우는 WINAPI에서는 DC를 통해서 작업을 진행할 수 있다.
             // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
             EndPaint(hWnd, &ps);
         }
