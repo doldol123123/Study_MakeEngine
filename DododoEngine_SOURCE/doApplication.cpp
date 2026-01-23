@@ -1,4 +1,5 @@
 #include "doApplication.h"
+#include "doInput.h"
 
 namespace dododo {
 	Application::Application() : mHwnd(nullptr), mHdc(nullptr)
@@ -14,6 +15,8 @@ namespace dododo {
 		mHdc = GetDC(hwnd);
 
 		mPlayer.SetPosition(0, 0);
+
+		Input::Initailize();
 	}
 	void Application::Run()
 	{
@@ -23,6 +26,8 @@ namespace dododo {
 	}
 	void Application::Update()
 	{
+		Input::Update();
+
 		mPlayer.Update();
 	}
 	void Application::LateUpdate()
