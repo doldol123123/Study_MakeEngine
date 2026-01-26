@@ -1,5 +1,6 @@
 #include "GameObject.h"
 #include "doInput.h"
+#include "doTime.h"
 
 namespace dododo
 {
@@ -13,24 +14,26 @@ namespace dododo
 
 	void GameObject::Update()
 	{
+		const float speed = 100;
+
 		if (Input::GetKey(eKeyCode::A))
 		{
-			mX -= 0.01f;
+			mX -= speed * Time::DeltaTime();
 		}
 
 		if (Input::GetKey(eKeyCode::D))
 		{
-			mX += 0.01f;
+			mX += speed * Time::DeltaTime();
 		}
 
 		if (Input::GetKey(eKeyCode::W))
 		{
-			mY -= 0.01f;
+			mY -= speed * Time::DeltaTime();
 		}
 
 		if (Input::GetKey(eKeyCode::S))
 		{
-			mY += 0.01f;
+			mY += speed * Time::DeltaTime();
 		}
 	}
 
